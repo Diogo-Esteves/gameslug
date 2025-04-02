@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Slug Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas" width="640" height="480"></canvas>
+    
+    <div class="start-screen">
+      <div class = "start-screen-content">
+        <h2>GET READY!</h2>
+        <p>Use Arrow Keys to Move and Jump.</p>
+        <p>Press Spacebar to Shoot.</p>
+        <button class="start-button">START GAME</button>
+        <div class="difficulty-buttons">
+            <button class="difficulty-button" data-difficulty="easy">Easy</button>
+            <button class="difficulty-button active" data-difficulty="medium">Medium</button> <button class="difficulty-button" data-difficulty="hard">Hard</button>
+        </div>
+        <button id="toggleSoundButton">Sound OFF</button> </div>
+    </div>
+
+    <div class="game-over-overlay">
+        <div class = "game-over-content">
+            <h2>Game Over</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+
+    <div class="instructions-box">
+        <h2>How to Play</h2>
+        <ul>
+            <li><span style="color:#f59e0b">←</span> / <span style="color:#f59e0b">→</span>: Move Left / Right</li>
+            <li><span style="color:#f59e0b">↑</span>: Jump</li>
+            <li><span style="color:#f59e0b">Spacebar</span>: Shoot</li>
+        </ul>
+        <p>Destroy enemies and survive!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.min.js"></script>
+    <script src="game.js"></script> 
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #111; /* Dark background */
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#gameCanvas {
+    border: 2px solid #3b82f6; /* Tailwind's blue-500 */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    background-image: url('content/bg-level1.png'); /* 800x600, adjust as needed */
+    background-size: cover;
+    background-position: center;
+}
+
+.game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 10;
+    display: none; /* Hidden by default */
+}
+.game-over-content {
+  border: 4px solid #f87171;
+  border-radius: 8px;
+  padding: 16px;
+
+}
+
+#restartButton, .difficulty-button, #toggleSoundButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3b82f6; /* Tailwind's blue-500 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s ease;
+    margin: 4px;
+}
+
+#restartButton:hover, .difficulty-button:hover, #toggleSoundButton:hover{
+    background-color: #2563eb; /* Tailwind's blue-700 */
+}
+
+.difficulty-buttons {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.difficulty-button.active {
+    background-color: #1e40af; /* Tailwind's blue-800 */
+    box-shadow: 0 0 5px #fff;
+}
+
+#toggleSoundButton.active {
+    background-color: #1e40af; /* Tailwind's blue-800 */
+    box-shadow: 0 0 5px #fff;
+}
+
+.start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.start-screen-content {
+  padding: 16px;
+  border: 4px solid #84cc16;
+  border-radius: 8px;
+
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #84cc16; /* Tailwind's green-500 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #65a30d; /* Tailwind's green-700 */
+}
+
+.instructions-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
+  font-size: 0.7rem;
+  z-index: 11;
+  max-width: 300px;
+}
+
+.instructions-box h2 {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #ffdb58;
+}
+
+.instructions-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.instructions-box li {
+  margin-bottom: 4px;
+}
+
+.instructions-box p{
+    margin-bottom: 4px;
+}
+
